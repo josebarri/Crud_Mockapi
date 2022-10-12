@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="img/donut.png">
+  <title>Twin Donuts</title>
+</head>
+
+<body onload="cargarDatos()">
+  <header class="header">
+
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <img src="img/donut.png"width="45" height="45" alt="">
+        <a class="navbar-brand" href="index.html"> <SPAn class="h4" style="color: #d63384;">Twin </SPAn>Donuts</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mx-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="cliente.html">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="pedido.html">Pedidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="producto.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="usuario.html">Usuarios</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <div class="container mt-5">
+
+    <h1 class="text-center    mt-5"> <span style="color: black;">GESTION DE PRODUCTOS</span> </h1>
+
+    <section id="seccionModificar" class="bg-ligth p-2 border border-dark d-none">
+    </section>
+    <section id="seccionFormulario" class="bg-ligth p-2 border borderdark d-none">
+      <h2>Agregar producto</h2>
+      <form action="#">
+        <div class="mb-3">
+          <label for="precio" class="form-label">precio</label>
+          <input type="text" class="form-control" id="precio" placeholder="ingrese el nombre">
+        </div>
+        <div class="mb-3">
+            <label for="codigo" class="form-label">codigo</label>
+            <input type="text" class="form-control" id="codigo" placeholder="ingrese el codigo">
+        </div>
+        <div class="mb-3">
+          <label for="tamano" class="form-label">tamaño</label>
+          <input type="text" class="form-control" id="tamano"  placeholder="ingrese el tamaño">
+        </div>
+        <div class="mb-3">
+          <label for="sabor" class="form-label">sabor</label>
+          <input type="text" class="form-control" id="sabor" placeholder="ingrese el sabor">
+      </div>
+        <div class="mb-3">
+          <input type="button" class="btn btn-primary" id="btnGuardar" value="Guardar">
+          <input type="button" class="btn btn-danger" id="btnCancelar" value="Cancelar">
+        </div>
+      </form>
+    </section>
+
+    <section id="datos">
+
+      <input style="background-color:#d63384 ;" type="button" class="btn btn-dark mt-3" id="btnAgregar" value="Agregar">
+      <table class="table mt-3" id="tblDatos">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Tamaño</th>
+            <th scope="col">Sabor</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody id="tbdDatos">
+        </tbody>
+      </table>
+    </section>
+  </div>
+  
+
+    <footer class="container-fluid mt-5">
+      <div class="row p-5 pb-2 bg-dark text-light">
+
+          <div class="col-xs-12 col-md-6 col-lg-3 pt-5 mt-5">
+              <img src="img/donut.png"width="45" height="45" alt="">
+              <a class="navbar-brand text-light" href="index.html"> <SPAn class="h4" style="color: #d63384;">Twin </SPAn>Donuts</a>
+              
+
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-3">
+              <p class="h5">PRODUCTOS</p>
+              <div class="mb-2">
+                  <a class="text-secondary text-decoration-none" href="#">lorem1</a>
+              </div>
+              <div class="mb-2">
+                  <a class="text-secondary text-decoration-none" href="#">lorem2</a>
+              </div>
+              <div class="mb-2">
+                  <a class="text-secondary text-decoration-none" href="#">lorem3</a>
+              </div>
+              <div class="mb-2">
+                  <a class="text-secondary text-decoration-none" href="#">lorem4</a>
+              </div>
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-3">
+              <p class="h5">LINKS</p>
+              <div class="mb-2">
+                  <a class="text-secondary text-decoration-none" href="#">Terminos y Condiciones</a>
+              </div>
+              <div class="mb-2">
+                  <a class="text-secondary text-decoration-none" href="#">Privacy policy</a>
+              </div>
+
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-3">
+              <p class="h5">CONTACTO</p>
+              <div class="mb-2">
+                  <img src="img/instagram.png" width="30" height="30"alt="">
+                  <a class="text-secondary text-decoration-none" href="#">Instagram</a>
+              </div>
+              <div class="mb-2">
+                  <img src="img/facebook.png" width="30" height="30"alt="">
+                  <a class="text-secondary text-decoration-none" href="#">Facebook</a>
+              </div>
+              <div class="mb-2">
+                  <img src="img/youtube.png" width="30" height="30"alt="">
+                  <a class="text-secondary text-decoration-none" href="#">Youtube</a>
+              </div>
+              <div class="mb-2">
+                  <img src="img/twitter.png" width="30" height="30"alt="">
+                  <a class="text-secondary text-decoration-none" href="#">Twitter</a>
+              </div>
+          </div>
+
+          <div class="col-xs-12 pt-5">
+              <p class="text-light text-center pt-5">Copyright - All rights reserved © 2022 </p>
+
+          </div>
+
+      </div>
+
+  </footer>
+  <!-- Script del proyecto-->
+  <script src="js/appProducto.js"></script>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
